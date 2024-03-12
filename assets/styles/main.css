@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Proxima Nova", "Courier New", Courier, monospace;
+  }
+
+  h1 {
+    font: 800 48px/1.2 'Proxima Nova';
+
+    @apply md:mb-6;
+  }
+
+  h2 {
+    font: 800 24px/1.2 'Proxima Nova';
+  }
+
+  .description {
+    font: 600 24px/1.2 'Proxima Nova';
+
+    @apply md:mb-8;
+  }
+
+  button {
+    font: 700 16px/1.2 'Proxima Nova';
+
+    @apply flex
+    w-full
+    justify-center
+    items-center
+    px-3 
+    rounded-[12px];
+  }
+}
