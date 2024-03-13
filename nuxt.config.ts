@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '~/assets/styles/main.css',
   ],
   colorMode: {
-    classSuffix: "",
+    classPrefix: '',
   },
   postcss: {
     plugins: {

@@ -7,6 +7,11 @@
     font-family: "Proxima Nova", "Courier New", Courier, monospace;
   }
 
+  body.light-layout {
+    min-height: 100vh;
+    background: url('assets/images/var-1/bg.jpg') top/cover;
+  }
+
   h1 {
     font: 800 48px/1.2 'Proxima Nova';
 

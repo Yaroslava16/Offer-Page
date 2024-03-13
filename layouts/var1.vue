@@ -1,11 +1,37 @@
 <template>
   <div>
-    <p>HEADER VAR1</p>
+    <Header>
+      <template #logo>
+        <img class="h-full w-full" src="~assets/images/var-1/logo.svg" />
+      </template>
+    </Header>
     <main>
       <div>
         <slot />
       </div>
     </main>
   </div>
-  
 </template>
+
+<script setup>
+const colorMode = useColorMode()
+const localColorMode = ref(colorMode.value)
+
+watchEffect(() => {
+  if (localColorMode.value === 'light') {
+    document.body.classList.add('light-layout');
+    document.body.classList.remove('dark-layout');
+  } else {
+    document.body.classList.add('dark-layout');
+    document.body.classList.remove('light-layout');
+  }
+})
+
+</script>
+
+<style lang="scss">
+  body.light-layout {
+    min-height: 100vh;
+    background: url('assets/images/var-1/bg.jpg') top/cover;
+  }
+</style>
