@@ -2,7 +2,7 @@
   <div>
     <Header>
       <template #logo>
-        <img class="h-full w-full" src="~assets/images/var-2/logo.svg" />
+        <img src="~assets/images/var-2/logo.svg" />
       </template>
     </Header>
     <main>
@@ -14,11 +14,14 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode()
+const colorMode = useColorMode();
+colorMode.value = "dark";
+
+
 const localColorMode = ref(colorMode.value)
 
 watchEffect(() => {
-  if (localColorMode.value === 'dark') {
+  if (colorMode.value === 'dark') {
     document.body.classList.add('dark-layout');
     document.body.classList.remove('light-layout');
   } else {

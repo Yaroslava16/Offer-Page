@@ -21,7 +21,11 @@ export default {
     extend: {
       colors: {
         transparent: 'transparent',
-        'orange': '#FF8D24',
+        'orange': {
+          100: '#FF8D24',
+          200: '#FEC538',
+          300: '#FFDA80',
+        },
         'green': {
           100: '#00CA14',
           200: '#01C120',
@@ -29,18 +33,20 @@ export default {
         'red': '#FF0000CC',
         'gray': {
           100: '#D2D2D2',
-          200: '#8b8b8b',
-          300: '#c3c9e4',
+          200: '#8B8B8B',
+          300: '#C3C9E4',
           400: '#6C727F',
           500: '#4D5E82',
           600: '#CDCDCD',
-          700: '#00000033',
+          700: '#D2D5DA',
+          800: '#00000033',
         },
         'blue': {
           100: '#66EDFF',
           200: '#4EAAFF',
           300: '#6C89FF',
           400: '#7899FF',
+          500: '#495EEE'
         }
       }
     },
